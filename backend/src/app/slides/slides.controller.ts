@@ -320,7 +320,7 @@ export class SlidesController {
     async searchSlides(
         @Body() body: searchSlidesReq
     ) {
-        return this.slideRepository.search(body.query);
+        return this.slideRepository.search(body.query, null);
     }
 
     @UseGuards(JwtAuthGuard)
